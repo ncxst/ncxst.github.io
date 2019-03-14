@@ -1,0 +1,116 @@
+:root{
+    --list-em: 1.2em;
+    --pull-down-size: 0.5em;
+    --main-color: yellowgreen;
+    --accent-color: teal;
+}
+
+html {
+	  padding:0;
+	  margin:0;
+	  overflow-x:hidden;
+}
+
+/* -------------- nav -------------- */
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    /* vertical-align: top; */
+}
+nav ul li {
+    display: inline-block;
+    list-style-type: none;
+    vertical-align: top;
+}
+
+nav li a {
+    text-decoration:none;
+    background-color: var(--main-color);
+    display: inline-block;
+    color: inherit;
+    font-size: var(--list-em);
+    text-decoration: none;
+    vertical-align: top;
+
+    /* margin: 0; */
+    padding: 0;
+    border: 0.4em solid var(--main-color);
+    border-bottom-left-radius: 0.4em;
+    border-bottom-right-radius: 0.4em;
+}
+
+@keyframes pull-down {
+    from {padding-top: inherit;}
+    to {padding-top: var(--pull-down-size);}
+}
+
+nav li a:hover,
+nav li a:focus,
+nav li a:active {
+    vertical-align: top;
+    animation-name: pull-down;
+    animation-duration: 0.2s;
+	  animation-timing-function: ease-out;
+    /* color: darkslategray; */
+    color: teal;
+    padding-top: var(--pull-down-size);
+}
+
+nav ul li a[aria-current=page],
+nav ul li a[aria-current=page]:hover
+nav ul li a[aria-current=page]:focus,
+nav ul li a[aria-current=page]:active
+{
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: none;
+	  background-color: var(--accent-color);
+	  border-color: var(--accent-color);
+	  color: inherit;
+    font-size: 1.5em;
+    padding-top:  0;
+    padding-left: 0.5em;
+    padding-right:0.5em;
+
+}
+
+body {
+    background-color: ghostwhite;
+	  padding-left:  2vw;
+	  padding-right: 2vw;
+    margin: 0;
+}
+
+p {
+    font-size: 1.0em;
+    font-family: sans-serif;
+    text-align: justify;
+}
+
+h1,h2 {
+    font-size: 1.7em;
+    background-color: var(--main-color);
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    padding-bottom: 0.1em;
+    left: -2.5vw;
+	  position:relative;
+    border-top-right-radius: 0.4em;
+    border-bottom-right-radius: 0.4em;
+    display: inline-block;
+    text-align: left;
+}
+
+
+
+
+#publications a{
+    background-color: #ccc;
+    border-radius: 0.2em;
+}
+#publications li{
+    /* list-style-type:lower-roman; */
+}
